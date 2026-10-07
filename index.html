@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ee">
+  <title>Color Sort — Satu warna, satu tabung</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="game-shell">
+    <main id="game" aria-label="Permainan Color Sort">
+      <header class="header">
+        <div class="brand"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span><h1>Color Sort<span>PUZZLE JEDA HARI INI</span></h1></div>
+        <button id="help" class="icon-button" aria-label="Cara bermain">?</button>
+      </header>
+      <section class="stats" aria-label="Statistik permainan">
+        <div><span class="stat-label">LEVEL</span><strong id="level">01 <small>/ 10</small></strong></div>
+        <div><span class="stat-label">LANGKAH</span><strong id="moves">0</strong></div>
+        <div><span class="stat-label">SELESAI</span><strong id="completed">0 <small>/ 3</small></strong></div>
+      </section>
+      <div class="progress-track" aria-hidden="true"><div id="progress"></div></div>
+      <section class="puzzle" aria-label="Tabung warna">
+        <div class="puzzle-caption"><span id="difficulty">PEMANASAN</span><span class="clock"><span aria-hidden="true">◷</span> <time id="timer">00:00</time></span></div>
+        <div id="tubes" class="tube-grid"></div>
+        <div class="instruction"><span class="instruction-dot" aria-hidden="true"></span><span id="instruction">Pilih tabung, lalu tujuan bolanya.</span></div>
+      </section>
+      <footer class="controls">
+        <div class="secondary-controls">
+          <button id="undo"><span aria-hidden="true">↶</span>Undo</button>
+          <button id="reset"><span aria-hidden="true">↻</span>Ulangi</button>
+        </div>
+        <button id="hint" class="primary-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-5 3h4M8.5 14.5a6 6 0 1 1 7 0c-1 .7-1.5 1.5-1.5 3h-4c0-1.5-.5-2.3-1.5-3Z"/></svg>Petunjuk<span aria-hidden="true">↗</span></button>
+        <p class="footer-note">SATU WARNA. SATU TABUNG. SATU JEDA.</p>
+      </footer>
+      <div id="overlay" class="overlay" hidden>
+        <section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"></section>
+      </div>
+      <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    </main>
+  </div>
+</body>
+</html>
